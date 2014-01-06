@@ -13,9 +13,18 @@
 		<p>No hay ninguna pelicula {{'con ' + 'ese ' + 'nombre'}} 1 + 2 = {{1 + 2}}</p>
 		<p>{{id}}</p>
 		<p>Total number of phones: {{phones.length}}</p>
-		<p>Titulo {{xhrData.Title}}</p>
+		<p>Titulo {{xhrData.title}}</p>
 		<p>Titulo {{xhrData.Plot}}</p>
 		<img src="{{xhrData.Poster}}" alt="">
+
+		<ul>
+	        <li ng-repeat="movie in xhrData">
+	        	<div class="info">{{movie.plot}}</div>
+	        	<div class="info">------------{{movie.title}}</div>
+	        </li>
+	     </ul>
+
+
 	</div>
 
 	<!-- AngularJs -->
