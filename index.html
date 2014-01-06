@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="movieApp">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Probando Angular</title>
+	<!--styles -->
+	<link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+	
+	<div class="controlador" ng-controller="homeControler">
+		<p>No hay ninguna pelicula {{'con ' + 'ese ' + 'nombre'}} 1 + 2 = {{1 + 2}}</p>
+		<p>{{id}}</p>
+		<p>Total number of phones: {{phones.length}}</p>
+		<ul>
+		</ul>
+	</div>
+
+	<!-- AngularJs -->
+	<script src="src/lib/angular.min.js"></script>
+	<script src="src/app.js"></script>
+	<script src="src/controllers/controllers.js"></script>
+	<script src="src/services/services.js"></script>
+</body>
+</html>
