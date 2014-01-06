@@ -3,10 +3,12 @@
 movieApp.service('movieService', function($q, $http) {
 	this.getMovie = function(id) {
 		movieID = id;
+		var url = "http://www.omdbapi.com/?i=" + movieID;
 		var deferred = $q.defer();
-		$http.get("http://www.omdbapi.com/?i=" + movieID).then(function(response) {
+		$http.get(url).then(function(response) {
         		deferred.resolve(response.data);
         		//console.log(response.data)
+        		//return (response.data);
         		//console.log(deferred.promise)
     		});
     		return deferred.promise;
