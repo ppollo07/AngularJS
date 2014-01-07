@@ -10,19 +10,31 @@
 <body>
 	
 	<div class="controlador" ng-controller="homeControler">
-		<p>No hay ninguna pelicula {{'con ' + 'ese ' + 'nombre'}} 1 + 2 = {{1 + 2}}</p>
 		<p>{{id}}</p>
-		<p>Total number of phones: {{phones.length}}</p>
-		<p>Titulo {{xhrData.title}}</p>
-		<p>Titulo {{xhrData.Plot}}</p>
+		<p>Total number of movies: {{movies.length}}</p>
 		<img src="{{xhrData.Poster}}" alt="">
+		<input type="text" name="id_movie" id="id_movie" ng-model="id" ng-change="ng_change_id()">
+		<input type="text" name="title_movie" id="title_movie" ng-model="title" ng-change="ng_change_title()">
 
 		<ul>
-	        <li ng-repeat="movie in xhrData">
+	        <li ng-repeat="movie in movies">
+	        	<a href="{{movie.imdb_url}}" target="_new">
+	        		<img src="{{movie.poster.cover}}" alt="{{movie.title}}" width="64">
+	        	</a>
 	        	<div class="info">{{movie.plot}}</div>
 	        	<div class="info">------------{{movie.title}}</div>
 	        </li>
-	     </ul>
+	    </ul>
+
+	    <ul>
+	        <li>
+	        	<a href="{{movieid.imdb_url}}" target="_new">
+	        		<img src="{{movieid.poster.cover}}" alt="{{movieid.title}}" width="64">
+	        	</a>
+	        	<div class="info">{{movieid.plot}}</div>
+	        	<div class="info">------------{{movieid.title}}</div>
+	        </li>
+	    </ul>
 
 
 	</div>
